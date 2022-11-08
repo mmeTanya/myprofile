@@ -1,0 +1,22 @@
+.picture{
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.image{
+  animation-name: animate_box;
+  animation-duration: 5000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes animate_box {
+  0% {
+    transform: scale(3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,75 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: absolute;
+  top: 140px;
+  right: 50px;
+  z-index: 3;
+  animation-name: animate_list;
+  animation-duration: 9000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+
+
+  @media screen and (max-width: 900px) {
+    top: 30px;
+    right: 15px;
+  }
+
+
+
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+
+    @media screen and (max-width: 900px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 1.175;
+    letter-spacing: 0.02em;
+    color: white;
+
+    &:focus,
+    &:hover {
+      color: #E59560;
+    }
+
+    @media screen and (max-width: 900px) {
+      font-size: 30px;
+    }
+  }
+
+  .menu__link_active {
+    padding-left: 115px;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 1.175;
+    letter-spacing: 0.02em;
+    color: white;
+    background-image: linear-gradient(to bottom,
+        transparent 35%,
+        #E59560 35%,
+        #E59560 100%);
+
+    @media screen and (max-width: 900px) {
+      font-size: 30px;
+      padding-left: 70px;
+    }
+  }
+}
+
+@keyframes animate_list {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

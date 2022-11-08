@@ -1,0 +1,52 @@
+#757575: #757575;
+$secondary-text-color: rgba(255, 255, 255, 0.6);
+$third-text-color: rgba(255, 255, 255, 0.3);
+$fourth-text-color: rgba(117, 117, 117, 0.5);
+#212121: #212121;
+$secondary-title-text-color: #000000;
+$white-color: #ffffff;
+#2196f3: #2196f3;
+$primary-background-color: rgba(255, 255, 255, 1);
+$secondary-background-color: rgba(47, 48, 58, 1);
+$third-background-color: rgba(245, 244, 250, 1);
+$fourth-background-color: rgba(24, 140, 232, 1);
+$border-color: rgba(0, 0, 0, 0.1);
+$primary-border-color: #ececec;
+$secondary-border-color: #eeeeee;
+$third-border-color: rgba(175, 177, 184, 1);
+$form-border-color: rgba(33, 33, 33, 0.2);
+$icons-color: #afb1b8;
+$icons-background-color: rgba(255, 255, 255, 0.1);
+$backdrop-background-color: rgba(0, 0, 0, 0.2);
+$first-overlay-color: rgba(47, 48, 58, 0.8);
+$second-overlay-color: rgba(33, 150, 243, 0.9);
+250ms: 250ms;
+cubic-bezier(0.4, 0, 0.2, 1): cubic-bezier(0.4, 0, 0.2, 1);
+
+:export {
+primary-text-color: #757575;
+secondary-text-color: $secondary-text-color;
+third-text-color: $third-text-color;
+fourth-text-color: $fourth-text-color;
+primary-title-text-color: #212121;
+secondary-title-text-color: $secondary-title-text-color;
+white-color: $white-color;
+accent-color: #2196f3;
+primary-background-color: $primary-background-color;
+secondary-background-color: $secondary-background-color;
+third-background-color: $third-background-color;
+fourth-background-color: $fourth-background-color;
+border-color: $border-color;
+primary-border-color: $primary-border-color;
+$secondary-border-color: $secondary-border-color;
+$third-border-color: rgba(175, 177, 184, 1);
+$form-border-color: rgba(33, 33, 33, 0.2);
+$icons-color: #afb1b8;
+$icons-background-color: rgba(255, 255, 255, 0.1);
+$backdrop-background-color: rgba(0, 0, 0, 0.2);
+$first-overlay-color: rgba(47, 48, 58, 0.8);
+$second-overlay-color: rgba(33, 150, 243, 0.9);
+250ms: 250ms;
+cubic-bezier(0.4, 0, 0.2, 1): cubic-bezier(0.4, 0, 0.2, 1);
+
+}

@@ -1,0 +1,27 @@
+.skills {
+  padding: 50px 0 300px;
+  background-color: #F6F4E8;
+
+  @media screen and (max-width: 500px) {
+    padding: 50px 0 300px;
+  }
+
+  &__title {
+    font-family: Playfair Display, serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 1.175;
+    letter-spacing: 0.02em;
+    color: #1D3124;
+    margin-bottom: 70px;
+    text-align: center;
+
+    @media screen and (max-width: 500px) {
+      font-size: 35px;
+    }
+    
+  }
+}
+
+ 

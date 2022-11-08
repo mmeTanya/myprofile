@@ -1,0 +1,150 @@
+.page_footer {
+  background-color: rgba(47, 48, 58, 1);
+  padding: 60px 0px;
+
+  &__container {
+    text-align: center;
+  }
+
+  &__title {
+    color: white;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+
+    margin-bottom: 20px;
+  }
+}
+
+.container_union {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+
+
+.contact_container {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+}
+
+.page_footer__contact_item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address {
+  margin-top: 20px;
+}
+
+.page_footer__location {
+  color: rgba(255, 255, 255, 1);
+
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: #2196f3;
+  }
+}
+
+.page_footer__contact_link {
+  color: rgba(255, 255, 255, 0.6);
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: #2196f3;
+  }
+}
+
+.join_us {
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+
+  &__social_list {
+    display: flex;
+    justify-content: center;
+
+  }
+
+  &__social_icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.join_us {
+  &__social_item {
+    width: 44px;
+    height: 44px;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__instagram {
+    @extend %link;
+    background-image:
+      url("../public/instagram.svg");
+  }
+
+  &__twitter {
+    @extend %link;
+    background-image:
+      url("../public/twitter.svg");
+  }
+
+  &__facebook {
+    @extend %link;
+    background-image:
+      url("../public/facebook.svg");
+  }
+
+  &__linkedin {
+    @extend %link;
+    background-image:
+      url("../public/linkedin.svg");
+  }
+}
+
+
+%link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  height: 20px;
+  box-sizing: content-box;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: #2196f3;
+  }
+}

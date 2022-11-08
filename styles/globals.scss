@@ -1,0 +1,45 @@
+body {
+  background-color: #BACEC1;
+  color: white;
+  padding: 0;
+  margin: 0;
+  font-family: 'Dancing Script', cursive, 'Playfair Display', serif;
+  font-size: 14px;
+  min-width: 350px;
+  
+ 
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0px;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  height: auto;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 30px;
+  min-width: 320px;
+  max-width: 1170px;
+}
