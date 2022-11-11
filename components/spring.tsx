@@ -88,7 +88,7 @@ const trans = (r: number, s: number) =>
             {...bindX(i)}
             style={{
               transform: interpolate([rot, scale], trans),
-              backgroundImage: `url(${cards[i]})`,
+            backgroundImage: `url(${cards[i]})`
             }}
           />
         </animated.div>
