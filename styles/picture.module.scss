@@ -2,13 +2,11 @@
   display: flex;
   flex-wrap: wrap;
   position: relative;
+  overflow-x: hidden;
 }
 
 .image{
-  animation-name: animate_box;
-  animation-duration: 5000ms;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
+  animation: animate_box 5000ms 1;
 }
 
 @keyframes animate_box {

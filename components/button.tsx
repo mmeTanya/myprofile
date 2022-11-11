@@ -3,12 +3,15 @@ import s from '/styles/button.module.scss';
 let className = ''
 const getStyledButton = theme => {
   switch (theme) {
-    case 'blue':
-      className = s.blue
+    case 'animate':
+      className = s.animate
       return
-    case 'white':
-      className = s.white
-
+    case 'no_animate':
+      className = s.no_animate
+      return
+      case 'active':
+        className = s.active
+        return
     default:
       return {};
   }

@@ -1,0 +1,52 @@
+[
+    {
+        "name": "WebStudio",
+        "descrition": "Company site",
+        "category": "website",
+        "image":"https://res.cloudinary.com/dbqsdxojb/image/upload/v1668116480/skills/IMG_20221110_213112_nkh5vu.jpg",
+        "link":"https://webstudio-27.netlify.app/"
+    },
+    {
+        "name": "PhoneBook",
+        "descrition": "Your phone book",
+        "category": "web application",
+        "image":"https://res.cloudinary.com/dbqsdxojb/image/upload/v1668116481/skills/IMG_20221110_213043_volxfx.jpg",
+        "link":"https://mme-tanya-phonebook.netlify.app/phonebook"
+    },
+    {
+        "name": "Find movie",
+        "descrition": "App about searching movies.",
+        "category": "web application",
+        "image":"https://res.cloudinary.com/dbqsdxojb/image/upload/v1668116480/skills/IMG_20221110_213150_lnpus3.jpg",
+        "link":"https://movies-275.netlify.app/"
+    },
+    {
+        "name": "The Builder",
+        "descrition": "Company site",
+        "category": "website",
+        "image":"https://res.cloudinary.com/dbqsdxojb/image/upload/v1668116480/skills/IMG_20221110_213252_r6dhzp.jpg",
+        "link":"https://mmetanya.github.io/Website-of-the-building-company/"
+    },
+    {
+        "name": "Ice cream",
+        "descrition": "Ice Cream company site.",
+        "category": "website",
+        "image":"https://res.cloudinary.com/dbqsdxojb/image/upload/v1668116480/skills/IMG_20221110_213321_xjk4bs.jpg",
+        "link":"https://mmetanya.github.io/Ice-cream/"
+    },
+    {
+        "name": "Kapusta",
+        "descrition": "Kapusta is the Web app for calculating your finances. The Web App provides the following functions: keep track of your expenses and income; keep your records for the entire period; user authorization via Gmail and registration with two factor authentication via email; create statistics of expenses and incomes for the selected period; plot statistics by category and subcategory; responsive design for use on phone, tablet and desktop.",
+        "category": "web application",
+        "image":"https://res.cloudinary.com/dbqsdxojb/image/upload/v1668116479/skills/IMG_20221110_213209_bllusa.jpg",
+        "link":"https://kapusta-application.netlify.app/"
+    },
+    {
+        "name": "Filmoteka",
+        "descrition": "Website about searching movies, and adding favorite movies to a client personal library.",
+        "category": "website",
+        "image":"https://res.cloudinary.com/dbqsdxojb/image/upload/v1668116480/skills/IMG_20221110_213229_wts7dg.jpg",
+        "link":"https://mmetanya.github.io/Filmoteka/"
+    }
+   
+]

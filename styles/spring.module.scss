@@ -2,24 +2,33 @@
   position: absolute;
   width: 300px;
   height: 200px;
-  left: 15vw;
+  left: 5vw;
   will-change: transform;
   display: flex;
   align-items: center;
   justify-content: center;
   touch-action: none;
+ 
 }
 
-.deck > div {
-  background-color: white;
+.deck>div {
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #F6F4E8;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   width: 45vw;
   max-width: 250px;
   height: 85vh;
-  max-height: 285px;
+  max-height: 250px;
   will-change: transform;
   border-radius: 10px;
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16);
+ 
+
+  @media screen and (max-width: 700px) {
+    width: 150px;
+    height: 200px;
+  }
 }

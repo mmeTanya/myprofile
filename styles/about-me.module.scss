@@ -1,0 +1,62 @@
+.about {
+  padding: 120px 30px;
+  width: 100vw;
+  height: 1000px;
+  background-color: rgba(186, 206, 193, 1);
+  overflow-x: hidden;
+
+  &__text {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.175;
+    letter-spacing: 0.02em;
+    color: #1D3124;
+    margin-bottom: 15px;
+
+    @media screen and (max-width: 800px) {
+      font-size: 16px;
+    }
+  }
+
+  &__text_link {
+    font-family: Playfair Display, serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.175;
+    letter-spacing: 0.02em;
+    color: #1D3124;
+    margin-top: 70px;
+
+    @media screen and (max-width: 800px) {
+      font-size: 16px;
+    }
+  }
+
+  &__link {
+    color: #F6F4E8;
+    font-family: 'Dancing Script';
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: #E59560;
+      font-size: 35px;
+    }
+
+    @media screen and (max-width: 800px) {
+      font-size: 16px;
+
+      &:hover,
+    &:focus {
+      font-size: 18px;
+    }
+    }
+  }
+
+
+}

@@ -5,7 +5,7 @@
   width: 500px;
   text-align: center;
   padding-bottom: 200px;
-  
+
 
   @media screen and (max-width: 800px) {
     width: 200px;
@@ -30,10 +30,6 @@
     letter-spacing: 0.02em;
     color: white;
     margin-bottom: 30px;
-    animation-name: animate;
-  animation-duration: 9000ms;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
 
     @media screen and (max-width: 800px) {
       font-size: 30px;
@@ -47,10 +43,7 @@
     letter-spacing: 0.02em;
     color: white;
     margin-bottom: 195px;
-    animation-name: animate;
-  animation-duration: 9000ms;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
+
 
 
     @media screen and (max-width: 800px) {
@@ -60,6 +53,9 @@
   }
 
   &__title_small {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     font-family: Playfair Display, serif;
     font-style: italic;
     font-weight: 700;
@@ -67,12 +63,15 @@
     line-height: 1.175;
     letter-spacing: 0.02em;
     color: #1D3124;
+    padding: 0 20px;
     margin-bottom: 50px;
     text-align: start;
-    animation-name: animate;
-  animation-duration: 12000ms;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
+    animation: animate 12000ms 1, animate_title 5000ms infinite 12000ms;
+
+    @media screen and (max-width: 450px) {
+      bottom: 25%;
+    }
+
 
     @media screen and (max-width: 800px) {
       font-size: 16px;
@@ -81,14 +80,22 @@
   }
 
   &__list {
+    position: absolute;
+    bottom: -15%;
+    left: -35px;
     text-align: start;
     list-style: disc;
     color: #1D3124;
-    padding: 0 20px;
+    padding: 0 30px;
     animation-name: animate;
     animation-duration: 12000ms;
     animation-timing-function: linear;
     animation-iteration-count: 1;
+
+    @media screen and (max-width: 450px) {
+      bottom: 15%;
+      left: 10px;
+    }
   }
 
   &__item {
@@ -102,8 +109,20 @@
     letter-spacing: 0.02em;
     color: #1D3124;
 
+    &:hover,
+    &:focus {
+      color: #E59560;
+      font-size: 33px;
+    }
+
     @media screen and (max-width: 800px) {
       font-size: 18px;
+
+      &:hover,
+      &:focus {
+        font-size: 21px;
+      }
+
     }
   }
 }
@@ -115,5 +134,22 @@
 
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes animate_title {
+  0% {
+    transform: scale(1);
+    color: white;
+  }
+
+  50% {
+    transform: scale(1.2);
+    color: #E59560;
+  }
+
+  100% {
+    transform: scale(1);
+    color: white;
   }
 }

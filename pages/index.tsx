@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Footer from '../components/footer'
 import Skills from '../components/skills'
+import Order from '../components/make-order'
 import Hero from '../components/hero'
 import Picture from '../components/picture'
 import s from "../styles/home.module.scss";
@@ -26,6 +27,7 @@ const Home: NextPage = () => {
           <main>
               <Hero />
               <Skills />
+              <Order />
               </main>
           <footer>
             <Footer />

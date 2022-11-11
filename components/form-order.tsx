@@ -9,23 +9,20 @@ const Form = ({ onClose }) => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [comments, setComments] = useState('');
-  const [agree, setAgree] = useState(false);
   const [errorsSubmit, setErrorsSubmit] = useState({
     name: '',
     email: '',
     phone: '',
-    comments: '',
-    agree: ''
+    comments: ''
   });
 
 
-  const handleChange = ({ target: { name, value, checked } }) => {
+  const handleChange = ({ target: { name, value } }) => {
     setErrorsSubmit({
       name: '',
       email: '',
       phone: '',
       comments: '',
-      agree: ''
     });
     switch (name) {
       case 'name':
@@ -36,8 +33,6 @@ const Form = ({ onClose }) => {
         return setPhone(value);
       case 'comments':
         return setComments(value);
-      case 'agree':
-        return setAgree(checked);
       default:
         return;
     }
@@ -52,7 +47,6 @@ const Form = ({ onClose }) => {
     setEmail('');
     setPhone('');
     setComments('');
-    setAgree(false)
   };
 
   const handleSubmit = async (e) => {
@@ -107,19 +101,15 @@ const Form = ({ onClose }) => {
         comments: 'required'
       }));
     }
-    if (agree === false) {
-      setErrorsSubmit(prevState => ({
-        ...prevState,
-        agree: 'required'
-      }));
-    }
+
     console.log(errorsSubmit)
+
     if (name === '' ||
       !regexName.test(name) ||
       email === '' ||
       !regexEmail.test(email) ||
       phone === '' || !regexPhone.test(phone)
-      || comments === '' || agree === false) {
+      || comments === '') {
       return
     }
 
@@ -206,26 +196,8 @@ const Form = ({ onClose }) => {
         </textarea>
         {errorsSubmit.comments === 'required' && <p className={s.error}>Write text</p>}
       </div>
-      <div className={s.checkbox_field}>
-        <label className={s.form_info__label_agree}>
-          <input
-            className={s.form_info__checkbox}
-            type="checkbox"
-            name="agree"
-            checked={agree}
-            onChange={handleChange}
-          />
-          <span className={s.form_info__icon_agree}></span>
-          <span className={s.form_info__text_agree}>
-            I agree with the newsletter and accept{" "}
-            <a href="" className={s.form_info__agreement}>
-              confidential policy
-            </a>
-          </span>
-        </label>
-      </div>
       <div className={s.button}>
-        <Button theme={'blue'} type={'submit'} text={'Send'} />
+        <Button theme={'no_animate'} type={'submit'} text={'Send'} />
       </div>
     </form>
   );

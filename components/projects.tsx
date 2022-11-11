@@ -1,19 +1,24 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSpring, a } from '@react-spring/web'
 import Button from "../components/button";
 import s from "../styles/projects.module.scss";
 
 const categories = [
   { id: 1, name: 'All', active: true },
   { id: 2, name: 'Website', active: false },
-  { id: 3, name: 'Design', active: false },
-  { id: 4, name: 'Application', active: false },
-  { id: 5, name: 'Marketing', active: false },
-
+  { id: 3, name: 'Web application', active: false },
 ]
 
 const Projects = () => {
   const [projects, setProjects] = useState([])
   const [filtredProjects, setFiltredProjects] = useState([]);
+  const [flipped, set] = useState(false)
+
+  const { transform, opacity } = useSpring({
+    opacity: flipped ? 1 : 0,
+    transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
+    config: { mass: 5, tension: 500, friction: 80 },
+  })
 
   useEffect(() => {
     loadProjects()
@@ -52,23 +57,24 @@ const Projects = () => {
         <h1 className={s.projects__title}>Our projects</h1>
         <ul className={s.projects_menu}>
           {
-            categories.map(category => (<li key={category.id} className={s.projects_menu__item}><Button theme={category.active ? 'blue' : 'white'} onClick={filter} type={'button'} text={category.name} active={category.active} /></li>))}
+            categories.map(category => (<li key={category.id} className={s.projects_menu__item}><Button theme={category.active ? 'active' : 'no_animate'} onClick={filter} type={'button'} text={category.name} /></li>))}
         </ul>
         <ul className={s.projects__list}>
           {filtredProjects &&
             filtredProjects.map(project => (
               <li className={s.projects__item} key={project._id}>
-                <div className={s.projects__thumb}>
-                  <img src={project.photo} alt={project.name}
-                    width='450' height='460' className={s.projects__image} />
-                  <div className={s.projects__overlay}>
-                    <p className={s.projects__info}>{project.text}</p>
-                  </div>
-                </div>
-                <div className={s.projects__describing}>
-                  <p className={s.projects__name}> {project.name} </p>
-                  <span className={s.projects__type}>{project.category}</span>
-                </div>
+                <a className={s.projects__link}  href={project.link} onMouseOver={() => set(state => !state)} onTouchMove={() => set(state => !state)}>
+                  <a.div style={{ opacity: opacity.to(o => 1 - o), transform }}>
+                      <img src={project.image} alt={project.name}
+                        width='450' height='460' className={s.projects__image} />
+                    <div className={s.projects__describing}>
+                      <p className={s.projects__name}> {project.name} </p>
+                      <span className={s.projects__type}>{project.category}</span>
+                    </div>
+                  </a.div>
+                  <a.div style={{ opacity, transform, rotateX: '180deg',}}>
+                  </a.div>
+                </a>
               </li>
             ))
           }

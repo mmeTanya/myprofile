@@ -1,20 +1,18 @@
-.skills {
-  padding: 50px 0 300px;
-  overflow-x: hidden;
-  position: relative;
-  
- 
+.order {
+  padding: 50px 0 100px;
+  background-color: #F6F4E8;
+  text-align: center;
+  border: 1px solid #1D3124;
 
 
   &__title {
-    font-family: Playfair Display, serif;
     font-style: italic;
     font-weight: 700;
-    font-size: 50px;
+    font-size: 30px;
     line-height: 1.175;
     letter-spacing: 0.02em;
     color: #1D3124;
-    margin-bottom: 70px;
+    margin-bottom: 100px;
     text-align: center;
 
     @media screen and (max-width: 500px) {

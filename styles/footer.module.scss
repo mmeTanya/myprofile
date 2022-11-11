@@ -1,6 +1,6 @@
 .page_footer {
-  background-color: rgba(47, 48, 58, 1);
-  padding: 60px 0px;
+  background-color: #1D3124;
+  padding: 50px 0px;
 
   &__container {
     text-align: center;
@@ -10,10 +10,9 @@
     color: white;
 
     font-weight: 700;
-    font-size: 14px;
+    font-size: 25px;
     line-height: 1.14;
     letter-spacing: 0.03em;
-    text-transform: uppercase;
     text-align: center;
 
     margin-bottom: 20px;
@@ -37,33 +36,14 @@
 }
 
 .page_footer__contact_item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 5px;
 }
 
-.address {
-  margin-top: 20px;
-}
-
-.page_footer__location {
-  color: rgba(255, 255, 255, 1);
-
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover,
-  &:focus {
-    color: #2196f3;
-  }
-}
 
 .page_footer__contact_link {
   color: rgba(255, 255, 255, 0.6);
 
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 
@@ -71,7 +51,7 @@
 
   &:hover,
   &:focus {
-    color: #2196f3;
+    color: #E59560;
   }
 }
 
@@ -108,10 +88,10 @@
       url("../public/instagram.svg");
   }
 
-  &__twitter {
+  &__github {
     @extend %link;
     background-image:
-      url("../public/twitter.svg");
+      url("../public/git.svg");
   }
 
   &__facebook {
@@ -145,6 +125,6 @@
 
   &:hover,
   &:focus {
-    background-color: #2196f3;
+    background-color: #E59560;
   }
 }
