@@ -13,7 +13,7 @@ const Footer = () => {
                 <a href="https://goo.gl/maps/F8HtsvvBLD5XEcSb9" className={s.page_footer__contact_link}>Windsor, Berkshire, UK</a>
               </li>
               <li className={s.page_footer__contact_item}>
-                <a href="mme.tanyalegois@gmail.com" className={s.page_footer__contact_link}>tanyalegois@gmail.com</a>
+                <a href="mme.tanyalegois@gmail.com" className={s.page_footer__contact_link}>tanyalegoi@gmail.com</a>
               </li>
               <li className={s.page_footer__contact_item}>
                 <a href="+447493546287" className={s.page_footer__contact_link}>+44 7493 546 287</a>
