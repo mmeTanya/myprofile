@@ -1,9 +1,8 @@
 .overlay {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   z-index: 1;
   padding-bottom: 150px;
-
 }
 
 .cover_box_1 {
@@ -35,5 +34,3 @@
     width: 85%;
   }
 }
-
-
