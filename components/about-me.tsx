@@ -4,7 +4,6 @@ import Gallery from '../components/gallery'
 import s from "../styles/about-me.module.scss";
 
 
-
 const AboutMe = () => {
   const [slides, setSlides] = useState([])
   const [info, setInfo] = useState([])
@@ -18,19 +17,15 @@ const AboutMe = () => {
   const loadSlides = async () => {
     const response = await fetch('/api/gallery')
     const result = await response.json()
-    console.log(result)
     setSlides(result.gallery)
-    console.log(slides)
   }
   const loadInfo = async () => {
     const response = await fetch('/api/info')
     const result = await response.json()
-    console.log(result)
     setInfo(result.info)
-    console.log(info)
   }
-  return (
 
+  return (
     <section className={s.about}>
       <div className='container'>
         <Gallery slides={slides} />
@@ -38,12 +33,10 @@ const AboutMe = () => {
           {info.map(el => (<p key={el._id} className={s.about__text}>{el.info}</p>))}
         </div>
         <p className={s.about__text_link}>For looking my portfolio click <Link legacyBehavior href='/portfolio'>
-          <a id="link"
-            className={s.about__link}
-          >
+          <a id="link" className={s.about__link}>
             here
           </a>
-        </Link> </p>
+        </Link></p>
       </div>
     </section>
   );

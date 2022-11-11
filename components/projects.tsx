@@ -27,7 +27,6 @@ const Projects = () => {
   const loadProjects = async () => {
     const response = await fetch('/api/projects')
     const result = await response.json()
-    console.log(result)
     setProjects(result.projects)
     setFiltredProjects(result.projects);
   }
@@ -38,7 +37,6 @@ const Projects = () => {
     typeProject !== "All"
       ? setFiltredProjects(filterProjects(typeProject))
       : setFiltredProjects(projects);
-    console.log(filtredProjects)
   }
 
   const filterProjects = (type) => {

@@ -102,8 +102,6 @@ const Form = ({ onClose }) => {
       }));
     }
 
-    console.log(errorsSubmit)
-
     if (name === '' ||
       !regexName.test(name) ||
       email === '' ||

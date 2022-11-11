@@ -1,7 +1,5 @@
 import s from "../styles/footer.module.scss";
 
-
-
 const Footer = () => {
 
   return (
@@ -10,11 +8,17 @@ const Footer = () => {
         <div className={s.container_union}>
           <div className={s.contact_container}>
             <h2 className={s.page_footer__title}>Tetiana Legois</h2>
-              <ul className={s.page_footer__contact_list}>
-                <li className={s.page_footer__contact_item}> <a href="https://goo.gl/maps/F8HtsvvBLD5XEcSb9" className={s.page_footer__contact_link}>Windsor, Berkshire, UK</a> </li>
-                <li className={s.page_footer__contact_item}><a href="mme.tanyalegois@gmail.com" className={s.page_footer__contact_link}>mme.tanyalegois@gmail.com</a></li>
-                <li className={s.page_footer__contact_item}><a href="+447493546287" className={s.page_footer__contact_link}>+44 7493 546 287</a></li>
-              </ul>
+            <ul className={s.page_footer__contact_list}>
+              <li className={s.page_footer__contact_item}>
+                <a href="https://goo.gl/maps/F8HtsvvBLD5XEcSb9" className={s.page_footer__contact_link}>Windsor, Berkshire, UK</a>
+              </li>
+              <li className={s.page_footer__contact_item}>
+                <a href="mme.tanyalegois@gmail.com" className={s.page_footer__contact_link}>mme.tanyalegois@gmail.com</a>
+              </li>
+              <li className={s.page_footer__contact_item}>
+                <a href="+447493546287" className={s.page_footer__contact_link}>+44 7493 546 287</a>
+              </li>
+            </ul>
           </div>
           <div className={s.join_us}>
             <h3 className={s.page_footer__title}>Join me</h3>

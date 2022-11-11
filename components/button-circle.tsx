@@ -8,7 +8,7 @@ const getStyledButton = (theme: any) => {
       return
     case 'menu':
       className = s.menu
-
+      return
     default:
       return {};
   }

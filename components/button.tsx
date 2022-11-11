@@ -9,9 +9,9 @@ const getStyledButton = theme => {
     case 'no_animate':
       className = s.no_animate
       return
-      case 'active':
-        className = s.active
-        return
+    case 'active':
+      className = s.active
+      return
     default:
       return {};
   }
