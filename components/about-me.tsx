@@ -35,7 +35,7 @@ const AboutMe = () => {
       <div className='container'>
         <Gallery slides={slides} />
         <div>
-          {info.map(el => (<p key={el.id} className={s.about__text}>{el.info}</p>))}
+          {info.map(el => (<p key={el._id} className={s.about__text}>{el.info}</p>))}
         </div>
         <p className={s.about__text_link}>For looking my portfolio click <Link legacyBehavior href='/portfolio'>
           <a id="link"
