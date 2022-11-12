@@ -20,12 +20,15 @@ const Home: NextPage = () => {
             </div>
             <div className={s.cover_box_2}>
               <Picture />
+              <Hero />
             </div>
           </div>
           <main>
-              <Hero />
+            <div className={s.overlay_2}>
+               <img src="/leave.png" alt="leave" className={s.overlay_2__image}/>
               <Skills />
               <Order />
+              </div>
               </main>
           <footer>
             <Footer />

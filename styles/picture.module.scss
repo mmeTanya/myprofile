@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   position: relative;
   overflow-x: hidden;
+  animation:  animate_opacity 12000ms infinite 7000ms;
 }
 
 .image{
@@ -16,5 +17,19 @@
 
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes animate_opacity {
+  0% {
+    opacity:1;
+  }
+
+  50% {
+    opacity:0.55;
+  }
+
+  100% {
+    opacity:1;
   }
 }

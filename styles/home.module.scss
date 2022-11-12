@@ -15,6 +15,16 @@
   animation: animate_box_2 5000ms 1;
 }
 
+.overlay_2 {
+  background-color: transparent;
+  position: relative;
+
+  &__image{
+    width: 70vw;
+  }
+
+}
+
 @keyframes animate_box_1 {
   0% {
     width: 0%;

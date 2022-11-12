@@ -1,9 +1,9 @@
 .about {
   padding: 120px 30px;
   width: 100vw;
-  height: 1000px;
+  min-height: 1000px;
   background-color: rgba(186, 206, 193, 1);
-  overflow-x: hidden;
+  overflow: hidden;
 
   &__text {
     font-weight: 700;
@@ -20,8 +20,8 @@
 
   &__text_link {
     font-family: Playfair Display, serif;
-    font-weight: 700;
-    font-size: 30px;
+    font-weight: 500;
+    font-size: 28px;
     line-height: 1.175;
     letter-spacing: 0.02em;
     color: #1D3124;
@@ -52,9 +52,9 @@
       font-size: 16px;
 
       &:hover,
-    &:focus {
-      font-size: 18px;
-    }
+      &:focus {
+        font-size: 18px;
+      }
     }
   }
 
