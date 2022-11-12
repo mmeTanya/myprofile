@@ -1,13 +1,13 @@
 # example netlify.toml
 [build]
-  command = "yarn run build"
+  command = "next build"
   functions = "netlify/functions"
   publish = ".next"
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
   #[[redirects]]
-  #  from = "/"
+  #  from = "/*"
   #  to = "/index.html"
   #  status = 200
 
