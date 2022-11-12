@@ -1,8 +1,15 @@
 .overlay {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
+  width: 100vw;
   z-index: 1;
-  padding-bottom: 150px;
+  overflow-x: hidden;
+  padding-bottom: 250px;
+
+  @media screen and (max-width: 500px) {
+    padding-bottom: 100px;
+  }
+ 
 }
 
 .cover_box_1 {
@@ -21,7 +28,7 @@
 
   &__image{
     width: 70vw;
-  }
+  } 
 
 }
 

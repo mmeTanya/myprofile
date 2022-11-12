@@ -3,11 +3,11 @@
   flex-wrap: wrap;
   position: relative;
   overflow-x: hidden;
-  animation:  animate_opacity 12000ms infinite 7000ms;
+  animation:  animate_opacity 9000ms infinite 9000ms;
 }
 
 .image{
-  animation: animate_box 5000ms 1;
+  animation: animate_box 9000ms 1;
 }
 
 @keyframes animate_box {

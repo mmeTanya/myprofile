@@ -17,10 +17,10 @@ const Home: NextPage = () => {
           </Head>
           <div className={s.overlay}>
             <div className={s.cover_box_1} >
+            <Hero />
             </div>
             <div className={s.cover_box_2}>
               <Picture />
-              <Hero />
             </div>
           </div>
           <main>

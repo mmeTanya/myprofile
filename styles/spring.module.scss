@@ -1,6 +1,6 @@
 .deck {
   position: absolute;
- 
+
   left: 15vw;
   margin-top: 50px;
   will-change: transform;
@@ -8,27 +8,40 @@
   align-items: center;
   justify-content: center;
   touch-action: none;
+
   @media screen and (max-width: 500px) {
     margin-top: 0;
   }
- 
+
 }
 
 .deck>div {
   padding: 20px;
   background-color: #F6F4E8;
-  background-size:80%;
+  background-size: 80%;
   background-repeat: no-repeat;
   background-position: center;
-  width: 35vw;
-  height: 35vh;
+  width: 30vw;
+  max-width: 500px;
+  height: 65vh;
+  max-height: 550px;
   will-change: transform;
   border-radius: 10px;
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16);
- 
+
+  @media screen and (max-width: 1000px) {
+    max-height: 450px;
+   
+  }
 
   @media screen and (max-width: 700px) {
-    width: 150px;
-    height: 200px;
+    max-width: 300px;
+    max-height: 300px;
+   
+  }
+
+
+  @media screen and (max-width: 500px) {
+    max-height: 150px;
   }
 }

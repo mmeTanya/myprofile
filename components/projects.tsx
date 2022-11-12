@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSpring, a } from '@react-spring/web'
 import Button from "../components/button";
+import Loader from '../components/loader'
 import s from "../styles/projects.module.scss";
 
 const categories = [
@@ -9,10 +10,19 @@ const categories = [
   { id: 3, name: 'Web application', active: false },
 ]
 
+const Status = {
+  IDLE: 'idle',
+  PENDING: 'pending',
+  RESOLVED: 'resolved',
+  REJECTED: 'rejected',
+};
+
 const Projects = () => {
   const [projects, setProjects] = useState([])
   const [filtredProjects, setFiltredProjects] = useState([]);
   const [flipped, set] = useState(false)
+  const [status, setStatus] = useState(Status.IDLE);
+
 
   const { transform, opacity } = useSpring({
     opacity: flipped ? 1 : 0,
@@ -26,9 +36,11 @@ const Projects = () => {
 
   const loadProjects = async () => {
     const response = await fetch('/api/projects')
+    setStatus(Status.PENDING)
     const result = await response.json()
     setProjects(result.projects)
     setFiltredProjects(result.projects);
+    setStatus(Status.RESOLVED)
   }
 
   const filter = (e) => {
@@ -51,33 +63,37 @@ const Projects = () => {
 
   return (
     <section className={s.projects}>
-      <div className="container">
-        <h1 className={s.projects__title}>Our projects</h1>
-        <ul className={s.projects_menu}>
-          {
-            categories.map(category => (<li key={category.id} className={s.projects_menu__item}><Button theme={category.active ? 'active' : 'no_animate'} onClick={filter} type={'button'} text={category.name} /></li>))}
-        </ul>
-        <ul className={s.projects__list}>
-          {filtredProjects &&
-            filtredProjects.map(project => (
-              <li className={s.projects__item} key={project._id}>
-                <a className={s.projects__link}  href={project.link} onMouseOver={() => set(state => !state)} onTouchMove={() => set(state => !state)}>
-                  <a.div style={{ opacity: opacity.to(o => 1 - o), transform }}>
+      {status === Status.PENDING && <Loader />}
+      {status === Status.RESOLVED &&
+        (<div className="container">
+          <h1 className={s.projects__title}>Our projects</h1>
+          <ul className={s.projects_menu}>
+            {
+              categories.map(category => (<li key={category.id} className={s.projects_menu__item}>
+                <Button theme={category.active ? 'active_animate' : 'no_animate'} onClick={filter} type={'button'} text={category.name} />
+              </li>))}
+          </ul>
+          <ul className={s.projects__list}>
+            {filtredProjects &&
+              filtredProjects.map(project => (
+                <li className={s.projects__item} key={project._id}>
+                  <a className={s.projects__link} href={project.link} onClick={() => set(state => !state)} >
+                    <a.div style={{ opacity: opacity.to(o => 1 - o), transform }}>
                       <img src={project.image} alt={project.name}
                         width='450' height='460' className={s.projects__image} />
-                    <div className={s.projects__describing}>
-                      <p className={s.projects__name}> {project.name} </p>
-                      <span className={s.projects__type}>{project.category}</span>
-                    </div>
-                  </a.div>
-                  <a.div style={{ opacity, transform, rotateX: '180deg',}}>
-                  </a.div>
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
+                      <div className={s.projects__describing}>
+                        <p className={s.projects__name}> {project.name} </p>
+                        <span className={s.projects__type}>{project.category}</span>
+                      </div>
+                    </a.div>
+                    <a.div style={{ opacity, transform, rotateX: '180deg', }}>
+                    </a.div>
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>)}
     </section>
   );
 };

@@ -22,6 +22,7 @@
     "react-dom": "18.2.0",
     "react-glider": "^4.0.2",
     "react-glider-carousel": "^0.1.2",
+    "react-loader-spinner": "^5.3.4",
     "react-responsive": "^9.0.0",
     "react-spring": "^9.5.5",
     "react-toastify": "^9.1.1",

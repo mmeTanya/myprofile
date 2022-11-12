@@ -7,10 +7,7 @@
   top: 140px;
   right: 50px;
   z-index: 3;
-  animation-name: animate_list;
-  animation-duration: 9000ms;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
+  animation: animate_list 12000ms 1;
 
 
   @media screen and (max-width: 900px) {

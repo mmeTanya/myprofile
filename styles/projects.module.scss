@@ -17,14 +17,21 @@
   }
 
   &__item {
-    width: 55vw;
+    width: 70vw;
     margin: 50px auto;
     border-radius: 25px;
     display: block;
     background: transparent;
     text-decoration: none;
     overflow: hidden;
-    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16);
+    box-shadow: 8px -6px 16px -2px #414141;
+    transform: scale(1);
+    border: 3px solid #3c6b4d;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.15);
+    }
   }
 
   &__link {

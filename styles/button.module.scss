@@ -21,10 +21,7 @@
   width: 200px;
   height: 50px;
 
-  animation-name: animate;
-  animation-duration: 3000ms;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  animation: animate 3000ms infinite;
 
   &:hover,
   &:focus {
@@ -64,6 +61,20 @@
   height: 50px;
 }
 
+.active_animate {
+  @extend %button;
+  color: white;
+  background-color: #E59560;
+
+  font-weight: 500;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  width: 200px;
+  height: 50px;
+  animation: animate_2 3000ms infinite;
+}
+
 @keyframes animate {
   0% {
     transform: scale(1);
@@ -71,6 +82,20 @@
 
   50% {
     transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes animate_2 {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
   }
 
   100% {

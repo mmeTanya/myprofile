@@ -1,35 +1,31 @@
 .hero {
-  position: absolute;
-  left: 3vw;
-  top: 300px;
-  width: 500px;
+  position: relative;
+  z-index: 3;
+  width: 600px;
+  height: 100%;
   text-align: center;
-  padding-bottom: 200px;
+  overflow-y: initial;
 
 
   @media screen and (max-width: 800px) {
     width: 200px;
-    top: 150px;
-  }
-
-  @media screen and (max-width: 700px) {
-    padding-bottom: 100px;
-  }
-
-  @media screen and (max-width: 500px) {
-    padding-bottom: 150px;
   }
 
 
   &__title {
+    position: absolute;
+    top: 25%;
+    left: 12%;
     font-family: Playfair Display, serif;
     font-style: italic;
     font-weight: 700;
-    font-size: 55px;
+    font-size: 70px;
     line-height: 1.175;
     letter-spacing: 0.02em;
     color: white;
     margin-bottom: 30px;
+    animation: animate 12000ms 1;
+
 
     @media screen and (max-width: 800px) {
       font-size: 30px;
@@ -37,29 +33,29 @@
   }
 
   &__text {
+    position: absolute;
+    top: 35%;
     font-weight: 700;
-    font-size: 55px;
+    font-size: 70px;
     line-height: 1.175;
     letter-spacing: 0.02em;
     color: white;
-    margin-bottom: 195px;
-
-
+    margin-bottom: 350px;
+    animation: animate 12000ms 1;
 
     @media screen and (max-width: 800px) {
       font-size: 30px;
-      margin-bottom: 95px;
     }
   }
 
   &__title_small {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    top: 95%;
+    left: 3%;
     font-family: Playfair Display, serif;
     font-style: italic;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 35px;
     line-height: 1.175;
     letter-spacing: 0.02em;
     color: #1D3124;
@@ -68,34 +64,21 @@
     text-align: start;
     animation: animate 12000ms 1, animate_title 5000ms infinite 12000ms;
 
-    @media screen and (max-width: 450px) {
-      bottom: 25%;
-    }
-
-
     @media screen and (max-width: 800px) {
-      font-size: 16px;
-      margin-bottom: 20px;
+     font-size: 16px;
     }
+
   }
 
   &__list {
     position: absolute;
-    bottom: -15%;
-    left: -35px;
+    top: 105%;
+    left: 3%;
     text-align: start;
     list-style: disc;
     color: #1D3124;
     padding: 0 30px;
-    animation-name: animate;
-    animation-duration: 12000ms;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-
-    @media screen and (max-width: 450px) {
-      bottom: 15%;
-      left: 10px;
-    }
+    animation: animate 12000ms 1;
   }
 
   &__item {
@@ -104,7 +87,7 @@
 
   &__link {
     font-weight: 700;
-    font-size: 30px;
+    font-size: 35px;
     line-height: 1.175;
     letter-spacing: 0.02em;
     color: #1D3124;
