@@ -24,7 +24,6 @@
     letter-spacing: 0.02em;
     color: white;
     margin-bottom: 30px;
-    animation: animate 12000ms 1;
 
 
     @media screen and (max-width: 800px) {
@@ -41,8 +40,7 @@
     letter-spacing: 0.02em;
     color: white;
     margin-bottom: 350px;
-    animation: animate 12000ms 1;
-
+  
     @media screen and (max-width: 800px) {
       font-size: 30px;
     }
@@ -62,7 +60,7 @@
     padding: 0 20px;
     margin-bottom: 50px;
     text-align: start;
-    animation: animate 12000ms 1, animate_title 5000ms infinite 12000ms;
+    animation: animate_title 5000ms infinite 12000ms;
 
     @media screen and (max-width: 800px) {
      font-size: 16px;
@@ -78,7 +76,6 @@
     list-style: disc;
     color: #1D3124;
     padding: 0 30px;
-    animation: animate 12000ms 1;
   }
 
   &__item {
@@ -110,15 +107,6 @@
   }
 }
 
-@keyframes animate {
-  0% {
-    transform: scale(3);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
 
 @keyframes animate_title {
   0% {

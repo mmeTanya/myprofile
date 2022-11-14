@@ -7,15 +7,13 @@
   top: 140px;
   right: 50px;
   z-index: 3;
-  animation: animate_list 12000ms 1;
+  animation: animate_list 9000ms 1;
 
 
   @media screen and (max-width: 900px) {
     top: 30px;
     right: 15px;
   }
-
-
 
   &__item:not(:last-child) {
     margin-bottom: 32px;

@@ -18,20 +18,15 @@
 
   &__item {
     width: 70vw;
+    max-width: 350px;
+    height: 340px;
     margin: 50px auto;
-    border-radius: 25px;
     display: block;
-    background: transparent;
     text-decoration: none;
     overflow: hidden;
+    cursor: pointer;
+    border-radius: 5px;
     box-shadow: 8px -6px 16px -2px #414141;
-    transform: scale(1);
-    border: 3px solid #3c6b4d;
-
-    &:hover,
-    &:focus {
-      transform: scale(1.15);
-    }
   }
 
   &__link {
@@ -39,18 +34,14 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    background-color: rgba(186, 206, 193, 1);
   }
 
   &__describing {
     padding: 0 24px;
     border-top: none;
     text-align: center;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background-color: rgba(186,206,193,1);
     width: 100%;
-    opacity: 0.8;
 
     @media screen and (min-width: 768px) {
       flex-grow: 1;
@@ -62,16 +53,12 @@
     }
   }
 
-  &__thumb {
-    background-color: rgba(186,206,193,1);
-    width: 100%;
-    height: 100%;
-  }
-
   &__image {
-    object-fit: fill;
+    display: block;
     width: 100%;
-    height: 100%;
+    object-fit: cover;
+    height: 290px;
+    border-radius: 5px;
   }
 
   &__name {
@@ -83,7 +70,7 @@
   }
 
   &__type {
-    color: #757575;
+    color: #1D3124;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.03em;
@@ -128,7 +115,7 @@
     }
 
     &__item {
-      margin:0 15px 50px;
+      margin: 0 15px 50px;
       width: calc((100% - 4 * 15px) / 2);
     }
   }
@@ -140,7 +127,7 @@
   .projects {
 
     &__item {
-      
+
       margin: 15px 0 50px 15px;
       width: calc((100% - 6 * 15px) / 3);
     }

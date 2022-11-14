@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Rotate from 'react-reveal/Rotate';
 import { useSpring, a } from '@react-spring/web'
 import Button from "../components/button";
 import Loader from '../components/loader'
@@ -76,20 +77,22 @@ const Projects = () => {
           <ul className={s.projects__list}>
             {filtredProjects &&
               filtredProjects.map(project => (
-                <li className={s.projects__item} key={project._id}>
-                  <a className={s.projects__link} href={project.link} onClick={() => set(state => !state)} >
+                <Rotate left>
+                <li className={s.projects__item} key={project._id} onClick={() => set(state => !state)}>
                     <a.div style={{ opacity: opacity.to(o => 1 - o), transform }}>
+                    <a className={s.projects__link} href={project.link}  >
                       <img src={project.image} alt={project.name}
                         width='450' height='460' className={s.projects__image} />
                       <div className={s.projects__describing}>
                         <p className={s.projects__name}> {project.name} </p>
                         <span className={s.projects__type}>{project.category}</span>
                       </div>
+                      </a>
                     </a.div>
                     <a.div style={{ opacity, transform, rotateX: '180deg', }}>
                     </a.div>
-                  </a>
                 </li>
+                </Rotate>
               ))
             }
           </ul>
