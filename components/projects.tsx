@@ -77,8 +77,8 @@ const Projects = () => {
           <ul className={s.projects__list}>
             {filtredProjects &&
               filtredProjects.map(project => (
-                <Rotate left>
-                <li className={s.projects__item} key={project._id} onClick={() => set(state => !state)}>
+                <Rotate left key={project._id}>
+                <li className={s.projects__item} onClick={() => set(state => !state)}>
                     <a.div style={{ opacity: opacity.to(o => 1 - o), transform }}>
                     <a className={s.projects__link} href={project.link}  >
                       <img src={project.image} alt={project.name}
