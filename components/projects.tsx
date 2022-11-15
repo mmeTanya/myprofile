@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Rotate from 'react-reveal/Rotate';
+import { Rotate } from "react-awesome-reveal"
 import { useSpring, a } from '@react-spring/web'
 import Button from "../components/button";
 import Loader from '../components/loader'

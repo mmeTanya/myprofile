@@ -1,21 +1,24 @@
 .hero {
-  position: relative;
-  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
   width: 600px;
   height: 100%;
   text-align: center;
-  overflow-y: initial;
-
 
   @media screen and (max-width: 800px) {
     width: 200px;
   }
 
-
-  &__title {
+  &__title_cover {
     position: absolute;
     top: 25%;
     left: 12%;
+    margin-bottom: 30px;
+  }
+
+  &__title {
     font-family: Playfair Display, serif;
     font-style: italic;
     font-weight: 700;
@@ -23,33 +26,38 @@
     line-height: 1.175;
     letter-spacing: 0.02em;
     color: white;
-    margin-bottom: 30px;
-
 
     @media screen and (max-width: 800px) {
       font-size: 30px;
     }
   }
 
-  &__text {
+  &__text_cover {
     position: absolute;
     top: 35%;
+    margin-bottom: 350px;
+  }
+
+  &__text {
     font-weight: 700;
     font-size: 70px;
     line-height: 1.175;
     letter-spacing: 0.02em;
     color: white;
-    margin-bottom: 350px;
-  
+
     @media screen and (max-width: 800px) {
       font-size: 30px;
     }
   }
 
-  &__title_small {
+  &__title_small_cover {
     position: absolute;
-    top: 95%;
+    top: 75%;
     left: 3%;
+    margin-bottom: 50px;
+  }
+
+  &__title_small {
     font-family: Playfair Display, serif;
     font-style: italic;
     font-weight: 700;
@@ -58,33 +66,35 @@
     letter-spacing: 0.02em;
     color: #1D3124;
     padding: 0 20px;
-    margin-bottom: 50px;
     text-align: start;
-    animation: animate_title 5000ms infinite 12000ms;
+    animation: animate_title 5000ms infinite 7000ms;
 
     @media screen and (max-width: 800px) {
-     font-size: 16px;
+      font-size: 16px;
     }
-
   }
 
   &__list {
     position: absolute;
-    top: 105%;
+    top: 85%;
     left: 3%;
+    z-index: 77;
     text-align: start;
     list-style: disc;
-    color: #1D3124;
     padding: 0 30px;
   }
 
-  &__item {
+  &__item_cover {
     margin-bottom: 5px;
+  }
+
+  &__item {
+    color: #1D3124;
   }
 
   &__link {
     font-weight: 700;
-    font-size: 35px;
+    font-size: 41px;
     line-height: 1.175;
     letter-spacing: 0.02em;
     color: #1D3124;
@@ -96,7 +106,7 @@
     }
 
     @media screen and (max-width: 800px) {
-      font-size: 18px;
+      font-size: 21px;
 
       &:hover,
       &:focus {
@@ -105,6 +115,7 @@
 
     }
   }
+
 }
 
 
@@ -124,4 +135,3 @@
     color: white;
   }
 }
-

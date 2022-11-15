@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Footer from '../components/footer'
 import Skills from '../components/skills'
 import Order from '../components/make-order'
-import Hero from '../components/hero'
+
 import Picture from '../components/picture'
 import s from "../styles/home.module.scss";
 
@@ -12,17 +12,18 @@ const Home: NextPage = () => {
     <div >
       <Head>
         <title>Tetiana Legois</title>
-        <meta name="description" content="Profile of Full Stack web developer Tetiana Legois Windsor United Kingdom London React Javascript Next.js Node.js, HTML, CSS . Web aplication Website" />
+        <meta name="description" content="Profile of Full Stack web developer Tetiana Legois Windsor 
+        United Kingdom London React Javascript Next.js Node.js, HTML, CSS . Web aplication Website" />
         <link rel="icon" href="/love_birds.png" />
           </Head>
-          <div className={s.overlay}>
-            <div className={s.cover_box_1} >
-            <Hero />
-            </div>
-            <div className={s.cover_box_2}>
+          {/* <div className={s.overlay}>
+            <div className={s.cover_box_1} > */}
+           
+            {/* </div>
+            <div className={s.cover_box_2}> */}
               <Picture />
-            </div>
-          </div>
+           {/*  </div>
+          </div> */}
           <main>
             <div className={s.overlay_2}>
                <img src="/leave.png" alt="leave" className={s.overlay_2__image}/>
