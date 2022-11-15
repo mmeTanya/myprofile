@@ -1,6 +1,7 @@
 .projects {
   padding: 150px 50px;
   min-height: 1000px;
+  overflow-x: hidden;
 
   @media screen and (max-width: 768px) {
     padding: 120px 30px;
