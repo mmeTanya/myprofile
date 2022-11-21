@@ -15,8 +15,8 @@
     margin-bottom: 100px;
     text-align: center;
 
-    @media screen and (max-width: 500px) {
-      font-size: 35px;
+    @media screen and (min-width: 670px) {
+      font-size: 45px;
     }
     
   }
