@@ -1,6 +1,5 @@
 .deck {
   position: absolute;
-
   left: 15vw;
   margin-top: 50px;
   will-change: transform;
@@ -22,7 +21,7 @@
   background-repeat: no-repeat;
   background-position: center;
   width: 30vw;
-  max-width: 500px;
+  max-width: 400px;
   height: 65vh;
   max-height: 550px;
   will-change: transform;
@@ -30,14 +29,13 @@
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16);
 
   @media screen and (max-width: 1000px) {
-    max-height: 450px;
+    max-height: 350px;
    
   }
 
   @media screen and (max-width: 700px) {
     max-width: 300px;
     max-height: 300px;
-   
   }
 
 
