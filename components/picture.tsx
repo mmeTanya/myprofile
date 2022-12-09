@@ -11,22 +11,22 @@ const Picture = () => {
   return (
     <section  >
       <div className={s.picture}>
-        <Roll duration={1000} delay={1000} triggerOnce={true} className={s.image}>
+        <Roll duration={3000}  triggerOnce={true} className={s.image}>
           <img src="/hero1.jpg" alt="love_birds" width='100%' />
         </Roll>
-        <Roll duration={1000} className={s.image} direction={'right'} triggerOnce={true} >
+        <Roll duration={3000} className={s.image} direction={'right'} triggerOnce={true} >
           <img src="/hero2.jpg" alt="love_birds" width='100%'  />
         </Roll>
-        <Roll duration={1000} delay={3000} className={s.image} triggerOnce={true} >
+        <Roll duration={3000}  className={s.image} triggerOnce={true} >
           <img src="/hero3.jpg" alt="love_birds" width='100%' />
         </Roll>
-        <Roll duration={1000} delay={2000} className={s.image} direction={'right'} triggerOnce={true}>
+        <Roll duration={3000} className={s.image} direction={'right'} triggerOnce={true}>
           <img src="/hero4.jpg" alt="love_birds" width='100%' />
         </Roll>
-        <Roll duration={1000} delay={5000} className={s.image} triggerOnce={true} >
+        <Roll duration={3000}  className={s.image} triggerOnce={true} >
           <img src="/hero5.jpg" alt="love_birds" width='100%' />
         </Roll>
-        <Roll duration={1000} delay={4000} className={s.image} direction={'right'} triggerOnce={true}>
+        <Roll duration={3000}  className={s.image} direction={'right'} triggerOnce={true}>
           <img src="/hero6.jpg" alt="love_birds" width='100%' />
         </Roll>
         <Hero />

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Rotate } from "react-awesome-reveal"
+import { Roll } from "react-awesome-reveal"
 import { useSpring, a } from '@react-spring/web'
 import Button from "../components/button";
 import Loader from '../components/loader'
@@ -10,7 +10,7 @@ const categories = [
   { id: 2, name: 'Website', active: false },
   { id: 3, name: 'Web application', active: false },
 ]
-
+ 
 const Status = {
   IDLE: 'idle',
   PENDING: 'pending',
@@ -77,7 +77,7 @@ const Projects = () => {
           <ul className={s.projects__list}>
             {filtredProjects &&
               filtredProjects.map(project => (
-                <Rotate left key={project._id}>
+                <Roll left key={project._id} triggerOnce={true}>
                 <li className={s.projects__item} onClick={() => set(state => !state)}>
                     <a.div style={{ opacity: opacity.to(o => 1 - o), transform }}>
                     <a className={s.projects__link} href={project.link}  >
@@ -92,7 +92,7 @@ const Projects = () => {
                     <a.div style={{ opacity, transform, rotateX: '180deg', }}>
                     </a.div>
                 </li>
-                </Rotate>
+                </Roll>
               ))
             }
           </ul>
