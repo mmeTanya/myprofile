@@ -24,16 +24,16 @@
 }
 
 .image {
-  width: 50%;
-  height: 27vh;
+  width: 20%;
+ height: 11vh;
   display: block;
 
   @media screen and (min-width: 800px) {
-    height: 30vh;
+   height: 12vh;
    }
 
    @media screen and (min-width: 1200px) {
-    height: 50vh;
-   }
+    height: 20vh;
+   } 
 }
 
