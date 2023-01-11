@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { v1 as uuidv1 } from 'uuid';
 import Link from "next/link";
 import Gallery from '../components/gallery'
 import Loader from '../components/loader'
@@ -44,7 +45,9 @@ const AboutMe = () => {
         (<div className='container'>
           <Gallery slides={slides} />
           <div>
-            {info.map(el => (<p key={el._id} className={s.about__text}>{el.info}</p>))}
+          {info && info.map(item => <div key={uuidv1()}>
+            {item.text && item.text.map(el => <p key={uuidv1()} className={s.about__text}>{el.p}</p>
+            )}</div>)}
           </div>
           <p className={s.about__text_link}>For looking my portfolio click <Link legacyBehavior href='/portfolio'>
             <a id="link" className={s.about__link}>

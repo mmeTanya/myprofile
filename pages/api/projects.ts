@@ -8,7 +8,7 @@ export default async function handler(
 ) {
     let { db } = await connectToDatabase()
 
-    const projects = await db.collection('portfolio').find().toArray()
+    const projects = await db.collection('portfolio').find().sort({dateInFormat: - 1}).toArray()
 
     res.status(200).json({ projects })
 
