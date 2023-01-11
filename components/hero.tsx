@@ -7,14 +7,14 @@ const Hero = () => {
 
   return (
     <section className={s.hero}>
-      <Rotate delay={6000} className={s.hero__title_cover} triggerOnce={true}>
+      <Rotate delay={5000} className={s.hero__title_cover} triggerOnce={true}>
         <h1 className={s.hero__title} >WELCOME
         </h1>
       </Rotate>
-      <Rotate delay={7000} className={s.hero__text_cover} triggerOnce={true}>
+      <Rotate delay={6000} className={s.hero__text_cover} triggerOnce={true}>
         <p className={s.hero__text} >to the website of Full Stack Developer Tetiana Legois</p>
       </Rotate>
-      <JackInTheBox delay={8000} className={s.hero__title_small_cover} triggerOnce={true}>
+      <JackInTheBox delay={7000} className={s.hero__title_small_cover} triggerOnce={true}>
         <h2 className={s.hero__title_small}>
           What am I doing ?
         </h2>
