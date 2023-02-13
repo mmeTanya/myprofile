@@ -19,8 +19,8 @@ const Order = () => {
   return (
     <section className={s.order}>
       <div className='container'>
-        <h2 className={s.order__title}>For make order click on the button</h2>
-        <Button theme={'animate'} onClick={handleOpenModal} type={'button'} text={'Order service'} />
+        <h2 className={s.order__title}>For write me click on the button</h2>
+        <Button theme={'animate'} onClick={handleOpenModal} type={'button'} text={'Write'} />
         {showModal && <ClientOnlyPortal selector="#modal"><Modal onClose={handleCloseModal} /></ClientOnlyPortal>}
       </div>
     </section>
