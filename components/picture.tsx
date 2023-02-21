@@ -123,17 +123,12 @@ const Picture = () => {
       </div>
       <Menu />
       <div>
-        <Fade delay={9000} cascade damping={1e-1} className={s.text} style={divStyle}>
+        <Fade delay={3700} cascade damping={1e-1} className={s.text} style={divStyle}>
           I do well-designed websites and web applications allow entrepreneurs to connect
-          and engage with prospective customers, while serving as brilliant
-          marketing platforms. Websites and web applications are visually appealing,
-          polished and professional. Allow white space, uncluttered layouts with quality
-          photographs and graphics look and let your message shine through. A responsive
-          web design will automatically adjust for different screen sizes and viewports.
+          and engage with prospective customers. Websites and web applications are visually appealing,
+          polished and professional. A responsive web design will automatically adjust for different screen sizes and viewports.
           Websites and web applications are connected with databases. Websites are having
-          a user-friendly navigation. You maybe offering the best products or services in
-          in the market, nevertheless, they would be of no use, if visitors or potential
-          customers cannot locate them.
+          a user-friendly navigation.
         </Fade>
       </div>
     </section>
