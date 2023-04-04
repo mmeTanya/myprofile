@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { v1 as uuidv1 } from 'uuid';
+import { Slide, Fade } from "react-awesome-reveal"
 import Link from "next/link";
 import Gallery from '../components/gallery'
 import Loader from '../components/loader'
@@ -10,6 +11,10 @@ const Status = {
   PENDING: 'pending',
   RESOLVED: 'resolved',
   REJECTED: 'rejected',
+};
+
+const divStyle = {
+  whiteSpace: 'break-spaces'
 };
 
 const AboutMe = () => {
@@ -43,18 +48,19 @@ const AboutMe = () => {
       {status === Status.PENDING && <Loader />}
       {status === Status.RESOLVED &&
         (<div className='container'>
-          <Gallery slides={slides} />
           <div>
-          {info && info.map(item => <div key={uuidv1()}>
-            {item.text && item.text.map(el => <p key={uuidv1()} className={s.about__text}>{el.p}</p>
-            )}</div>)}
+            {info && info.map(item => <Fade key={uuidv1()} cascade damping={1} duration={1000} className={s.text} style={divStyle} triggerOnce={true}>
+              {item.text && item.text.map(el => <p key={uuidv1()} className={s.about__text}>{el.p}</p>
+              )}</Fade>)}
           </div>
           <p className={s.about__text_link}>For looking my portfolio click <Link legacyBehavior href='/portfolio'>
             <a id="link" className={s.about__link}>
               here
             </a>
           </Link></p>
-        </div>)}
+        </div>)
+      }
+      <Gallery slides={slides} />
     </section>
   );
 };

@@ -40,17 +40,19 @@
 }
 
 .text {
-  padding: 0 10px;
+  padding: 0 30px;
   white-space: break-spaces;
 
   color: #1D3124;
 
-  font-weight: 700;
-  font-size: 12px;
+  font-weight: 900;
+  font-size: 21px;
   line-height: 1.15;
+  margin: 70px 0;
 
   @media screen and (min-width: 768px) {
-    font-size: 21px;
-    padding: 0 70px;
+    font-size: 31px;
+    padding: 0 100px;
+    margin: 120px 0;
   }
 }

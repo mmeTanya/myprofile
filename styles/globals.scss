@@ -1,13 +1,13 @@
 body {
   color: white;
-  background: linear-gradient(90deg, rgba(186,206,193,1) 0%, rgba(6,38,45,0.9812967423297444) 100%);
+  background: linear-gradient(90deg, rgba(186, 206, 193, 1) 0%, rgba(6, 38, 45, 0.9812967423297444) 100%);
   padding: 0;
   margin: 0;
   font-family: 'Dancing Script', cursive, 'Playfair Display', serif;
   font-size: 14px;
   overflow-x: hidden;
-  
- 
+
+
 }
 
 h1,
@@ -48,12 +48,12 @@ address {
   display: grid;
   position: relative;
   margin-bottom: 50px;
-  
-  > .slide {
+
+  >.slide {
     grid-area: 1 / -1;
   }
 
-  > button {
+  >button {
     appearance: none;
     background: transparent;
     border: none;
@@ -80,6 +80,7 @@ address {
     &:first-child {
       left: -15px;
     }
+
     &:last-child {
       right: -15px;
     }
@@ -99,8 +100,8 @@ address {
 }
 
 .slideContent {
-  width: 20vw;
-  height: 25vw;
+  width: 15vw;
+  height: 20vw;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -111,8 +112,7 @@ address {
   align-content: center;
 
   transform-style: preserve-3d;
-  transform: perspective(1000px) translateX(calc(100% * var(--offset)))
-    rotateY(calc(-45deg * var(--dir)));
+  transform: perspective(1000px) translateX(calc(100% * var(--offset))) rotateY(calc(-45deg * var(--dir)));
 }
 
 .slideContentInner {
@@ -127,11 +127,11 @@ address {
 .slide[data-active] {
   z-index: 2;
   pointer-events: auto;
-  
+
 
   .slideContentInner {
     opacity: 1;
-    
+
   }
 
   .slideContent {
@@ -143,8 +143,7 @@ address {
 
     &:hover {
       transition: none;
-      transform: perspective(1000px) rotateY(calc(var(--x) * 45deg))
-        rotateX(calc(var(--y) * -45deg));
+      transform: perspective(1000px) rotateY(calc(var(--x) * 45deg)) rotateX(calc(var(--y) * -45deg));
     }
   }
 }
