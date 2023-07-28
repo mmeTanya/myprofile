@@ -21,7 +21,7 @@ const cards = [
   'https://res.cloudinary.com/dbqsdxojb/image/upload/v1667938357/skills/git_vvxuwl.png',
   'https://res.cloudinary.com/dbqsdxojb/image/upload/v1667938358/skills/github_kk1ksh.png',
   'https://res.cloudinary.com/dbqsdxojb/image/upload/v1667938359/skills/react_native_xic1wo.png'
-  
+
 ]
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
@@ -32,25 +32,25 @@ const cards = [
 const Spring = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
-const to = (i: number) => ({
-  x: 0,
-  y: i * -4,
-  scale: 1,
-  rot: -10 + Math.random() * 20,
-  delay: i * 100,
-})
-const from = (_i: number) => ({ y: 0, rot: 0, scale: 1.5, x: 370 })
-// This is being used down there in the view, it interpolates rotation and scale into a css transform
-const trans = (r: number, s: number) =>
-  `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
- 
+  const to = (i: number) => ({
+    x: 0,
+    y: i * -4,
+    scale: 1,
+    rot: -10 + Math.random() * 20,
+    delay: i * 100,
+  })
+  const from = (_i: number) => ({ y: 0, rot: 0, scale: 1.5, x: 370 })
+  // This is being used down there in the view, it interpolates rotation and scale into a css transform
+  const trans = (r: number, s: number) =>
+    `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
+
   const [gone] = useState(() => new Set()) // The set flags all the cards that are flicked out
   const [props, api] = useSprings(cards.length, i => ({
     ...to(i),
     from: from(i),
   })) // Create a bunch of springs using the helpers above
   // Create a gesture, we're interested in down-state, delta (current-pos - click-pos), direction and velocity
- 
+
   const bindX = useDrag(({ args: [index], down, movement: [mx], direction: [xDir], velocity }) => {
     const trigger = velocity > 0.2 // If you flick hard enough it should trigger the card to fly out
     const dir = xDir < 0 ? -1 : 1 // Direction should either point left or right
@@ -76,7 +76,7 @@ const trans = (r: number, s: number) =>
       }, 600)
   })
 
-  
+
 
   // Now we're just mapping the animated values to our view, that's it. Btw, this component only renders once. :-)
   return (
@@ -88,7 +88,7 @@ const trans = (r: number, s: number) =>
             {...bindX(i)}
             style={{
               transform: interpolate([rot, scale], trans),
-            backgroundImage: `url(${cards[i]})`
+              backgroundImage: `url(${cards[i]})`
             }}
           />
         </animated.div>
@@ -97,7 +97,7 @@ const trans = (r: number, s: number) =>
   )
 }
 
-export default Spring 
+export default Spring
 
 
 

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { v1 as uuidv1 } from 'uuid';
-import { Slide, Fade } from "react-awesome-reveal"
+import { Fade } from "react-awesome-reveal"
 import Link from "next/link";
 import Gallery from '../components/gallery'
 import Loader from '../components/loader'
@@ -49,7 +49,7 @@ const AboutMe = () => {
       {status === Status.RESOLVED &&
         (<div className='container'>
           <div>
-            {info && info.map(item => <Fade key={uuidv1()} cascade damping={1} duration={1000} className={s.text} style={divStyle} triggerOnce={true}>
+            {info && info.map(item => <Fade key={uuidv1()} cascade damping={1} duration={500} className={s.text} style={divStyle} triggerOnce={true}>
               {item.text && item.text.map(el => <p key={uuidv1()} className={s.about__text}>{el.p}</p>
               )}</Fade>)}
           </div>

@@ -23,7 +23,7 @@ const MobileNav = () => {
   return (
     <div className={s.container}>
       <div className={s.style}>
-      <ButtonCircle theme={'menu'} type={'button'} onClick={MenuOpen} />
+        <ButtonCircle theme={'menu'} type={'button'} onClick={MenuOpen} />
       </div>
       <div className={isClose ? s.isClose : s.menu_container}>
         <div className={s.mobile_menu}>
@@ -31,7 +31,7 @@ const MobileNav = () => {
           <ul className={s.mobile_menu__list}>
             {NavLinks.map((NavLink) => (
               <li className={s.mobile_menu__item} key={NavLink.id}>
-                <Link  legacyBehavior href={NavLink.path}>
+                <Link legacyBehavior href={NavLink.path}>
                   <a id="link"
                     className={
                       router.pathname === NavLink.path
@@ -45,8 +45,8 @@ const MobileNav = () => {
               </li>
             ))}
           </ul>
-         </div>
-         </div>
+        </div>
+      </div>
     </div>
   );
 };

@@ -7,7 +7,6 @@ body {
   font-size: 14px;
   overflow-x: hidden;
 
-
 }
 
 h1,
@@ -22,6 +21,7 @@ ul {
   margin: 0px;
   list-style-type: none;
 }
+
 
 img {
   display: block;
@@ -43,6 +43,8 @@ address {
   min-width: 320px;
   max-width: 1170px;
 }
+
+
 
 .slides {
   display: grid;
@@ -85,19 +87,6 @@ address {
       right: -15px;
     }
   }
-}
-
-.slide {
-  //transform-style: preserve-3d;
-  // border: solid 1px red;
-
-  // &[data-active] {
-  //   .slideContent > * {
-  //     transform: none;
-  //     opacity: 1;
-  //   }
-  // }
-}
 
 .slideContent {
   width: 15vw;
@@ -146,4 +135,4 @@ address {
       transform: perspective(1000px) rotateY(calc(var(--x) * 45deg)) rotateX(calc(var(--y) * -45deg));
     }
   }
-}
+}}

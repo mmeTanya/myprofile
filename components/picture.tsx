@@ -123,7 +123,7 @@ const Picture = () => {
       </div>
       <Menu />
       <div>
-        <Fade delay={3700} cascade damping={1e-1} className={s.text} style={divStyle}>
+      <Fade delay={3000} cascade damping={1e-1} triggerOnce={true} duration={300} style={divStyle} className={s.text}>
           I do well-designed websites and web applications allow entrepreneurs to connect
           and engage with prospective customers. Websites and web applications are visually appealing,
           polished and professional. A responsive web design will automatically adjust for different screen sizes and viewports.
