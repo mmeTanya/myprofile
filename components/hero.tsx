@@ -20,20 +20,20 @@ const Hero = () => {
         </h2>
       </JackInTheBox>
       <ul className={s.hero__list}>
-        <JackInTheBox delay={3000} className={s.hero__item_cover} triggerOnce={true}> 
+        <JackInTheBox delay={3000} className={s.hero__item_cover} triggerOnce={true}>
           <li className={s.hero__item}>
             <Link legacyBehavior href='/portfolio'>
               <a id="link" className={s.hero__link} > websites </a>
             </Link>
           </li>
-       </JackInTheBox>
-       <JackInTheBox delay={3500} className={s.hero__item_cover} triggerOnce={true}>
+        </JackInTheBox>
+        <JackInTheBox delay={3500} className={s.hero__item_cover} triggerOnce={true}>
           <li className={s.hero__item}>
             <Link legacyBehavior href='/portfolio'>
               <a id="link" className={s.hero__link}> web applications </a>
             </Link>
           </li>
-       </JackInTheBox> 
+        </JackInTheBox>
       </ul>
     </section>
   );

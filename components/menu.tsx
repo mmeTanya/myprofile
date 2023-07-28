@@ -10,26 +10,26 @@ const NavLinks = [
 
 const Menu = () => {
   const router = useRouter();
-  
+
   return (
-          
-          <ul className={s.menu}>
-            {NavLinks.map((NavLink) => (
-              <li className={s.menu__item} key={NavLink.id}>
-                <Link legacyBehavior href={NavLink.path}>
-                  <a id="link"
-                    className={
-                      router.pathname === NavLink.path
-                        ? s.menu__link_active
-                        : s.menu__link
-                    }
-                  >
-                    {NavLink.title}
-                  </a>
-                </Link>
-              </li>
-            ))}
-          </ul>
+
+    <ul className={s.menu}>
+      {NavLinks.map((NavLink) => (
+        <li className={s.menu__item} key={NavLink.id}>
+          <Link legacyBehavior href={NavLink.path}>
+            <a id="link"
+              className={
+                router.pathname === NavLink.path
+                  ? s.menu__link_active
+                  : s.menu__link
+              }
+            >
+              {NavLink.title}
+            </a>
+          </Link>
+        </li>
+      ))}
+    </ul>
   );
 };
 

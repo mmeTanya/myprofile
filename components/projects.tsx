@@ -10,7 +10,7 @@ const categories = [
   { id: 2, name: 'Website', active: false },
   { id: 3, name: 'Web application', active: false },
 ]
- 
+
 const Status = {
   IDLE: 'idle',
   PENDING: 'pending',
@@ -78,20 +78,20 @@ const Projects = () => {
             {filtredProjects &&
               filtredProjects.map(project => (
                 <Bounce left key={project._id} triggerOnce={true}>
-                <li className={s.projects__item} onClick={() => set(state => !state)}>
+                  <li className={s.projects__item} onClick={() => set(state => !state)}>
                     <a.div style={{ opacity: opacity.to(o => 1 - o), transform }}>
-                    <a className={s.projects__link} href={project.link}  >
-                      <img src={project.image} alt={project.name}
-                        width='450' height='460' className={s.projects__image} />
-                      <div className={s.projects__describing}>
-                        <p className={s.projects__name}> {project.name} </p>
-                        <span className={s.projects__type}>{project.category}</span>
-                      </div>
+                      <a className={s.projects__link} href={project.link}  >
+                        <img src={project.image} alt={project.name}
+                          width='450' height='460' className={s.projects__image} />
+                        <div className={s.projects__describing}>
+                          <p className={s.projects__name}> {project.name} </p>
+                          <span className={s.projects__type}>{project.category}</span>
+                        </div>
                       </a>
                     </a.div>
                     <a.div style={{ opacity, transform, rotateX: '180deg', }}>
                     </a.div>
-                </li>
+                  </li>
                 </Bounce>
               ))
             }

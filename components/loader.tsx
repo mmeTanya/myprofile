@@ -2,9 +2,10 @@ import { BallTriangle } from 'react-loader-spinner';
 
 const Loader = () => {
   const styles = {
-   div: {
+    div: {
       display: 'flex',
-   }}
+    }
+  }
 
   return (
     <div style={styles.div}>
