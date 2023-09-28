@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { v1 as uuidv1 } from 'uuid';
 import { Fade } from "react-awesome-reveal"
 import Link from "next/link";
-import Gallery from '../components/gallery'
 import Loader from '../components/loader'
 import s from "../styles/about-me.module.scss";
 
@@ -18,23 +17,15 @@ const divStyle = {
 };
 
 const AboutMe = () => {
-  const [slides, setSlides] = useState([])
   const [info, setInfo] = useState([])
   const [status, setStatus] = useState(Status.IDLE);
 
 
   useEffect(() => {
-    loadSlides()
     loadInfo()
   }, []);
 
-  const loadSlides = async () => {
-    const response = await fetch('/api/gallery')
-    setStatus(Status.PENDING)
-    const result = await response.json()
-    setSlides(result.gallery)
-    setStatus(Status.RESOLVED)
-  }
+
   const loadInfo = async () => {
     const response = await fetch('/api/info')
     setStatus(Status.PENDING)
@@ -52,6 +43,13 @@ const AboutMe = () => {
             {info && info.map(item => <Fade key={uuidv1()} cascade damping={1} duration={500} className={s.text} style={divStyle} triggerOnce={true}>
               {item.text && item.text.map(el => <p key={uuidv1()} className={s.about__text}>{el.p}</p>
               )}</Fade>)}
+            <Fade delay={3000} cascade damping={1e-1} triggerOnce={true} duration={300} style={divStyle} className={s.about__text}>
+              I do well-designed websites and web applications allow entrepreneurs to connect
+              and engage with prospective customers. Websites and web applications are visually appealing,
+              polished and professional. A responsive web design will automatically adjust for different screen sizes and viewports.
+              Websites and web applications are connected with databases. Websites are having
+              a user-friendly navigation.
+            </Fade>
           </div>
           <p className={s.about__text_link}>For looking my portfolio click <Link legacyBehavior href='/portfolio'>
             <a id="link" className={s.about__link}>
@@ -60,7 +58,6 @@ const AboutMe = () => {
           </Link></p>
         </div>)
       }
-      <Gallery slides={slides} />
     </section>
   );
 };

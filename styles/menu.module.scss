@@ -5,14 +5,14 @@
   align-items: flex-end;
   position: absolute;
   top: 140px;
-  right: 50px;
+  right: 100px;
   z-index: 3;
   animation: animate_list 7000ms 1;
 
 
   @media screen and (max-width: 900px) {
-    top: 30px;
-    right: 15px;
+    top: 100px;
+    right: 45px;
   }
 
   &__item:not(:last-child) {

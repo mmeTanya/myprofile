@@ -1,12 +1,8 @@
 import React from 'react'
-import { Slide, Fade } from "react-awesome-reveal"
+import { Slide } from "react-awesome-reveal"
 import Hero from '../components/hero'
 import Menu from '../components/menu'
 import s from "../styles/picture.module.scss";
-
-const divStyle = {
-  whiteSpace: 'break-spaces'
-};
 
 const Picture = () => {
 
@@ -122,15 +118,6 @@ const Picture = () => {
         <Hero />
       </div>
       <Menu />
-      <div>
-        <Fade delay={3000} cascade damping={1e-1} triggerOnce={true} duration={300} style={divStyle} className={s.text}>
-          I do well-designed websites and web applications allow entrepreneurs to connect
-          and engage with prospective customers. Websites and web applications are visually appealing,
-          polished and professional. A responsive web design will automatically adjust for different screen sizes and viewports.
-          Websites and web applications are connected with databases. Websites are having
-          a user-friendly navigation.
-        </Fade>
-      </div>
     </section>
   );
 };

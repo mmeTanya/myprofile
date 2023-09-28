@@ -22,18 +22,19 @@ const Home: NextPage = () => {
            
             {/* </div>
             <div className={s.cover_box_2}> */}
-              <Picture />
+              {/* <Picture /> */}
            {/*  </div>
           </div> */}
           <main>
-            <div className={s.overlay_2}>
+          <Picture />
+           {/*  <div className={s.overlay_2}>
                <img src="/leave.png" alt="leave" className={s.overlay_2__image}/>
               <Skills />
               <Order />
-              </div>
+              </div> */}
               </main>
           <footer>
-            <Footer />
+           {/*  <Footer /> */}
           </footer>
         </div>
         )
