@@ -43,13 +43,6 @@ const AboutMe = () => {
             {info && info.map(item => <Fade key={uuidv1()} cascade damping={1} duration={500} className={s.text} style={divStyle} triggerOnce={true}>
               {item.text && item.text.map(el => <p key={uuidv1()} className={s.about__text}>{el.p}</p>
               )}</Fade>)}
-            <Fade delay={3000} cascade damping={1e-1} triggerOnce={true} duration={300} style={divStyle} className={s.about__text}>
-              I do well-designed websites and web applications allow entrepreneurs to connect
-              and engage with prospective customers. Websites and web applications are visually appealing,
-              polished and professional. A responsive web design will automatically adjust for different screen sizes and viewports.
-              Websites and web applications are connected with databases. Websites are having
-              a user-friendly navigation.
-            </Fade>
           </div>
           <p className={s.about__text_link}>For looking my portfolio click <Link legacyBehavior href='/portfolio'>
             <a id="link" className={s.about__link}>

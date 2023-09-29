@@ -49,6 +49,8 @@ address {
 .slides {
   display: grid;
   position: relative;
+  width: 75%;
+  margin: auto;
   margin-bottom: 50px;
 
   >.slide {
@@ -59,7 +61,7 @@ address {
     appearance: none;
     background: transparent;
     border: none;
-    color: #1D3124;
+    color: #dce31c;
     position: absolute;
     font-family: Playfair Display, serif;
     font-weight: 700;
@@ -101,7 +103,7 @@ address {
     align-content: center;
 
     transform-style: preserve-3d;
-    transform: perspective(1000px) translateX(calc(100% * var(--offset))) rotateY(calc(-45deg * var(--dir)));
+    transform: perspective(100px) translateX(calc(100% * var(--offset))) rotateY(calc(-45deg * var(--dir)));
   }
 
   .slideContentInner {

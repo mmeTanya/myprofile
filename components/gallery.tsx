@@ -101,7 +101,7 @@ function Gallery({ slides }) {
 
 
   return (
-    <Bounce delay={3000} triggerOnce={true} className="btn">
+    <Bounce delay={3000} triggerOnce={true} className="cover">
       <div className="slides">
         <button onClick={() => dispatch({ type: "PREV" })}>‹</button>
         {[...slides, ...slides, ...slides].map((slide, i) => {
